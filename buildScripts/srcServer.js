@@ -1,9 +1,17 @@
-var express = require('express');
-var path = require('path');
-var open = require('open');
+// var express = require('express');    // ES5
+import express from 'express';  // ES6
 
-var port = 3000;
-var app = express(); // 'express' instance
+// var path = require('path');  // ES5
+import path from 'path';        // ES6
+
+// var open = require('open');  // ES5
+import open from 'open';        // ES6
+
+// var port = 3000;              // ES5
+const port = 3000;               // ES6
+
+// var app = express(); // 'express' instance // ES5
+const app = express();            // ES6
 
 // Tell express which routes to handle
 app.get('/', function(req, res) {
