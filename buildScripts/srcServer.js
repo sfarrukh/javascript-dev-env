@@ -27,6 +27,8 @@ app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname, '../src/index.html'));
 });
 
+/* eslint-disable no-console */
+
 // Tell express to listen to port defined above
 app.listen(port, function(err) {
     if(err) {
