@@ -7,11 +7,20 @@ import path from 'path';        // ES6
 // var open = require('open');  // ES5
 import open from 'open';        // ES6
 
+import webpack from 'webpack';
+import config from '../webpack.config.dev';
 // var port = 3000;              // ES5
 const port = 3000;               // ES6
 
 // var app = express(); // 'express' instance // ES5
 const app = express();            // ES6
+
+const compiler = webpack(config);
+
+app.use(require('webpack-dev-middleware')(compiler, {
+    noInfo: true,
+    publicPath: config.output.publicPath
+}));
 
 // Tell express which routes to handle
 app.get('/', function(req, res) {
