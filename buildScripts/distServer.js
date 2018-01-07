@@ -15,12 +15,12 @@ app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname, '../dist/index.html'));
 });
 
-app.get('/users', function (req, res) {
-  res.json([
-      {"id": 1, "firstName":"Ron", "lastName":"Smith", "email": "ron@website.com"},
-      {"id": 1, "firstName":"Kevin", "lastName":"Ice", "email": "kevin@website.com"}
-  ]);
-});
+// app.get('/users', function (req, res) {
+//   res.json([
+//       {"id": 1, "firstName":"Ron", "lastName":"Smith", "email": "ron@website.com"},
+//       {"id": 1, "firstName":"Kevin", "lastName":"Ice", "email": "kevin@website.com"}
+//   ]);
+// });
 
 app.listen(port, function(err) {
   if (err) {
